@@ -1,0 +1,15 @@
+# List sources.
+set(SOURCES
+  vector_hash.cpp
+  ngram_counter.hpp
+  ngram_counter_impl.cpp
+)
+
+# List of sources paths.
+set(PATHS_SRCS)
+foreach(source ${SOURCES})
+  set(PATHS_SRCS ${PATHS_SRCS} ${CMAKE_CURRENT_SOURCE_DIR}/${source})
+endforeach()
+
+# Add paths to yawiel sources.
+set(YAWIEL_SRCS ${YAWIEL_SRCS} ${PATHS_SRCS} PARENT_SCOPE)
