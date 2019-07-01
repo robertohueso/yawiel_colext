@@ -37,7 +37,7 @@ set(Boost_ADDITIONAL_VERSIONS
   "1.60.1" "1.60.0" "1.60"
   "1.59.1" "1.59.0" "1.59"
   "1.58.1" "1.58.0" "1.58")
-set(Boost_USE_STATIC_LIBS ON)
+#set(Boost_USE_STATIC_LIBS ON)
 find_package( Boost 1.58
     COMPONENTS
       unit_test_framework
