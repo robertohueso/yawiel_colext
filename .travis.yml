@@ -11,18 +11,26 @@ matrix:
             - sourceline: 'ppa:mhier/libboost-latest'
           packages:
             - g++
-            - boost1.68
+            - boost1.58
             - libomp-dev
       env: CMAKE_OPTIONS="-D BUILD_TESTS=ON STATIC_BUILD=OFF OMP=ON"
-#      before_install:
-#        - sudo add-apt-repository -y ppa:mhier/libboost-latest
-#        - sudo apt-get update
-#        - sudo apt-get install -y --allow-unauthenticated g++ boost1.68 cmake
+    - os: linux
+      dist: xenial
+      addons:
+        apt:
+          update: true
+          sources:
+            - sourceline: 'ppa:mhier/libboost-latest'
+          packages:
+            - g++
+            - boost1.58
+            - libomp-dev
+      env: CMAKE_OPTIONS="-D BUILD_TESTS=ON STATIC_BUILD=ON OMP=OFF" 
 
 install:
 - mkdir build
 - cd build
-- cmake $CMAKE_OPTIONS ..
+- cmake $CMAKE_OPTIONS ../
 - make
 
 script:
