@@ -41,6 +41,7 @@ find_package( Boost 1.58
     COMPONENTS
       unit_test_framework
       serialization
+      container
     REQUIRED )
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib/)
