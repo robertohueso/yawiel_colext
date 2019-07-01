@@ -1,5 +1,5 @@
 # YAWIEL
-[![Build Status](https://travis-ci.org/yawiel/yawiel.svg?branch=master)](https://travis-ci.org/yawiel/yawiel)
+[![Build Status](https://travis-ci.org/robertohueso/yawiel_colext.svg?branch=master)](https://travis-ci.org/robertohueso/yawiel_colext)
 
 Yet Another WIkifier and Entity Linker. This is a collocation extractor for the YAWIEL project.
 

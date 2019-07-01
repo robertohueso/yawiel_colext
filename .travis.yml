@@ -7,7 +7,7 @@ matrix:
       env: CMAKE_OPTIONS="-DBUILD_TESTS=ON"
       before_install:
         - sudo apt-get update
-        - sudo apt-get install -y --allow-unauthenticated g++ libboost-all-dev
+        - sudo apt-get install -y --allow-unauthenticated g++ libboost-all-dev libboost-container-dev
 
 install:
 - mkdir build
