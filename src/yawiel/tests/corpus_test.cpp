@@ -57,14 +57,4 @@ BOOST_AUTO_TEST_CASE(GramLeftToRightTest)
   BOOST_REQUIRE(ngrams[3] == L"is-yawiel");
 }
 
-/*
-BOOST_AUTO_TEST_CASE(FileLoadTest)
-{
-  yawiel::text::Corpus<> corpus;
-  corpus.loadFile("SmallText.txt");
-  for (auto token: corpus.GetTokens())
-    break;
-}
-*/
-
 BOOST_AUTO_TEST_SUITE_END();
