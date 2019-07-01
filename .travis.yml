@@ -11,7 +11,7 @@ matrix:
             - sourceline: 'ppa:mhier/libboost-latest'
           packages:
             - g++
-            - boost1.58
+            - boost1.67
             - libomp-dev
       env: CMAKE_OPTIONS="-D BUILD_TESTS=ON STATIC_BUILD=OFF OMP=ON"
     - os: linux
@@ -23,7 +23,7 @@ matrix:
             - sourceline: 'ppa:mhier/libboost-latest'
           packages:
             - g++
-            - boost1.58
+            - boost1.67
             - libomp-dev
       env: CMAKE_OPTIONS="-D BUILD_TESTS=ON STATIC_BUILD=ON OMP=OFF" 
 
