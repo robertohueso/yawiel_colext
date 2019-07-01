@@ -73,5 +73,7 @@ if (BUILD_DOCS)
         WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
         COMMENT "Build Doxygen documentation"
     )
+  else()
+    message("Doxygen not found!")
   endif()
 endif()

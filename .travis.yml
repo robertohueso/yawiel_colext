@@ -13,7 +13,7 @@ matrix:
             - g++
             - boost1.67
             - libomp-dev
-      env: CMAKE_OPTIONS="-D BUILD_TESTS=ON STATIC_BUILD=OFF OMP=ON"
+      env: CMAKE_OPTIONS="-D BUILD_TESTS=ON -D STATIC_BUILD=OFF -D OMP=ON"
     - os: linux
       dist: xenial
       addons:
@@ -25,7 +25,7 @@ matrix:
             - g++
             - boost1.67
             - libomp-dev
-      env: CMAKE_OPTIONS="-D BUILD_TESTS=ON STATIC_BUILD=ON OMP=OFF" 
+      env: CMAKE_OPTIONS="-D BUILD_TESTS=ON -D STATIC_BUILD=ON -D OMP=OFF" 
 
 install:
 - mkdir build

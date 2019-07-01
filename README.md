@@ -6,8 +6,8 @@ Yet Another WIkifier and Entity Linker. This is a collocation extractor for the 
 ## Build
 
 Dependencies:
-* CMake
-* Boost
+* CMake >= 3.5
+* Boost >= 1.67
 * OpenMP (optional).
 
 How to build?
