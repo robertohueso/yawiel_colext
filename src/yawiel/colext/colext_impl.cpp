@@ -115,11 +115,8 @@ GetScores(unordered_map<vector<size_t>, double>& scores,
     NormalizeScores(sortedScores);
 
     // Store values back in the hash table.
-    for (size_t i = sortedScores.size() - 1; i >= 0; --i)
-    {
+    for (size_t i = sortedScores.size() - 1; i > 0; --i)
       scores[sortedScores[i].first] = sortedScores[i].second;
-      sortedScores.pop_back();
-    }
   }
 }
 
