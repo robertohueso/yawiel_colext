@@ -7,7 +7,11 @@ add_subdirectory(core)
 add_subdirectory(colext)
 
 # Build yawiel library.
-add_library(yawiel SHARED ${YAWIEL_SRCS})
+if (SHARED_LIBS)
+  add_library(yawiel SHARED ${YAWIEL_SRCS})
+else()
+  add_library(yawiel STATIC ${YAWIEL_SRCS})
+endif()
 
 # Build tests if required.
 if (BUILD_TESTS)

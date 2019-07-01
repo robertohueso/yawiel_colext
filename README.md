@@ -8,6 +8,9 @@ Yet Another WIkifier and Entity Linker. This is a collocation extractor for the 
 Dependencies:
 * CMake >= 3.5
 * Boost >= 1.67
+  - unit\_test_framework
+  - serialization
+  - container
 * OpenMP (optional).
 
 How to build?

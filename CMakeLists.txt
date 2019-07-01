@@ -6,7 +6,10 @@ project(yawiel C CXX)
 # Compilation options.
 option(BUILD_TESTS "Build tests." ON)
 option(BUILD_DOCS "Build Doxygen documentation." OFF)
-option(STATIC_BUILD "Build using static linking (OMP cannot link)." OFF)
+option(STATIC_BUILD "Build executables using static linking (OMP cannot link)."
+       OFF)
+option(SHARED_LIBS "Build shared libraries (otherwise, static libraries are
+                    built." ON)
 option(OMP "Paralellize using OpenMP." OFF)
 
 # Set C++11 standard.
