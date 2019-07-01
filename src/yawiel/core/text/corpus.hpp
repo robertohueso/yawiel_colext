@@ -102,21 +102,25 @@ class Corpus
   //! Get whether a corpus has already been loaded.
   bool Loaded() const { return loaded; }
 
+  // SFINAE to get default separators.
   template<typename T = StringType>
   T GetDefaultSeparators(const typename std::enable_if<
                          std::is_same<T, std::string>::value>::type* = 0)
   { return " :!?=,.()[]\"/_-\'*+#"; }
 
+  // SFINAE to get default separators.
   template<typename T = StringType>
   T GetDefaultSeparators(const typename std::enable_if<
                          std::is_same<T, std::wstring>::value>::type* = 0)
   { return L" :!?=,.()[]\"/_-\'*+#"; }
 
+  // SFINAE to get default separators.
   template<typename T = StringType>
   T GetDefaultSeparators(const typename std::enable_if<
                          std::is_same<T, std::u16string>::value>::type* = 0)
   { return u" :!?=,.()[]\"/_-\'*+#"; }
 
+  // SFINAE to get default separators.
   template<typename T = StringType>
   T GetDefaultSeparators(const typename std::enable_if<
                          std::is_same<T, std::u32string>::value>::type* = 0)

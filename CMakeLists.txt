@@ -74,8 +74,7 @@ if (BUILD_DOCS)
         COMMAND "${DOXYGEN_EXECUTABLE}" "${CMAKE_SOURCE_DIR}/Doxyfile"
         DEPENDS "${CMAKE_SOURCE_DIR}/Doxyfile"
         WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
-        COMMENT "Build Doxygen documentation"
-    )
+        COMMENT "Build Doxygen documentation")
   else()
     message("Doxygen not found!")
   endif()

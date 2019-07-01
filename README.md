@@ -1,7 +1,8 @@
 # YAWIEL
 [![Build Status](https://travis-ci.org/robertohueso/yawiel_colext.svg?branch=master)](https://travis-ci.org/robertohueso/yawiel_colext)
 
-Yet Another WIkifier and Entity Linker. This is a collocation extractor for the YAWIEL project.
+Yet Another WIkifier and Entity Linker.
+This is a collocation extractor library for the YAWIEL project.
 
 ## Build
 
@@ -11,7 +12,7 @@ Dependencies:
   - unit\_test_framework
   - serialization
   - container
-* OpenMP (optional).
+* OpenMP (optional)
 
 How to build?
 
@@ -21,6 +22,8 @@ How to build?
 $ cd yawiel
 $ mkdir build
 $ cd build
-$ cmake ..
+$ cmake ../
 $ make
 ```
+
+This results in a library stored in ```build/lib/``` and (if activated) tests stored in ```build/bin/yawiel_test```.
