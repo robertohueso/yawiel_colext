@@ -25,6 +25,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -O3")
 # Boost library.
 # This list needs to be updated when new versions of Boost come out.
 set(Boost_ADDITIONAL_VERSIONS
+  "1.70.0"
   "1.69.0" "1.69" "1.70"
   "1.68.0" "1.68" "1.67.0"
   "1.67" "1.66.0" "1.66"
