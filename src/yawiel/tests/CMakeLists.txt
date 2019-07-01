@@ -7,11 +7,15 @@ add_executable(yawiel_test
   container_test.cpp
 )
 
+if (NOT STATIC_BUILD)
+ add_definitions(-DBOOST_TEST_DYN_LINK)
+endif()
+
 target_link_libraries(yawiel_test
   ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
   ${Boost_SERIALIZATION_LIBRARY}
-  ${Boost_LIBRARIES}
-  )
+  ${Boost_CONTAINER_LIBRARY}
+  ${Boost_LIBRARIES})
 
 if (STATIC_BUILD)
   set(CMAKE_EXE_LINKER_FLAGS "-static ${CMAKE_EXE_LINKER_FLAGS}")

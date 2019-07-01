@@ -12,7 +12,8 @@ matrix:
           packages:
             - g++
             - boost1.68
-      env: CMAKE_OPTIONS="-D BUILD_TESTS=ON"
+            - libomp-dev
+      env: CMAKE_OPTIONS="-D BUILD_TESTS=ON STATIC_BUILD=OFF OMP=ON"
 #      before_install:
 #        - sudo add-apt-repository -y ppa:mhier/libboost-latest
 #        - sudo apt-get update

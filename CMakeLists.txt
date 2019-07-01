@@ -37,13 +37,17 @@ set(Boost_ADDITIONAL_VERSIONS
   "1.60.1" "1.60.0" "1.60"
   "1.59.1" "1.59.0" "1.59"
   "1.58.1" "1.58.0" "1.58")
-#set(Boost_USE_STATIC_LIBS ON)
+if(STATIC_BUILD)
+  set(Boost_USE_STATIC_LIBS ON)
+endif()
 find_package( Boost 1.58
     COMPONENTS
       unit_test_framework
       serialization
       container
     REQUIRED )
+
+link_directories(${Boost_LIBRARY_DIRS})
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib/)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
